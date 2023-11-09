@@ -1,0 +1,16 @@
+C:\Users\202-16\Desktop\Cultural_Heritage\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.csproj.AssemblyReference.cache
+C:\Users\202-16\Desktop\Cultural_Heritage\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\202-16\Desktop\Cultural_Heritage\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.AssemblyInfoInputs.cache
+C:\Users\202-16\Desktop\Cultural_Heritage\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.AssemblyInfo.cs
+C:\Users\202-16\Desktop\Cultural_Heritage\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.csproj.CoreCompileInputs.cache
+C:\Users\202-16\Desktop\Cultural_Heritage\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\202-16\Desktop\Cultural_Heritage\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.RazorAssemblyInfo.cache
+C:\Users\202-16\Desktop\Cultural_Heritage\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.RazorAssemblyInfo.cs
+C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.csproj.AssemblyReference.cache
+C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.AssemblyInfoInputs.cache
+C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.AssemblyInfo.cs
+C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.csproj.CoreCompileInputs.cache
+C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.RazorAssemblyInfo.cache
+C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\obj\Debug\net7.0\CultureAssets.RazorAssemblyInfo.cs

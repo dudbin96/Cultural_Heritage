@@ -1,0 +1,38 @@
+﻿@model Cultural_Heritage.Models.cultureassets
+@{
+    ViewBag.Title = "Find";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 30%;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    }
+</style>
+
+<h2>검색 결과</h2>
+<table>
+    <table>
+        <tr><td>번 호</td><td>@Html.DisplayFor(model => model.num)</td></tr>
+        <tr><td>종 목</td><td>@Html.DisplayFor(model => model.ca_type)</td></tr>
+        <tr><td>명 칭</td><td>@Html.DisplayFor(model => model.ca_name)</td></tr>
+        <tr><td>소재지</td><td>@Html.DisplayFor(model => model.ca_addr)</td></tr>
+        <tr><td>시대명</td><td>@Html.DisplayFor(model => model.ca_period)</td></tr>
+        <tr><td>지정일</td><td>@Model.ca_date.ToString("yyyy-MM-dd")</td></tr>
+        <tr><td>세부사항</td><td>@Html.DisplayFor(model => model.ca_detail)</td></tr>
+    </table>
+</table>
+
+<div>
+    @Html.ActionLink("돌아가기", "Index")
+</div>

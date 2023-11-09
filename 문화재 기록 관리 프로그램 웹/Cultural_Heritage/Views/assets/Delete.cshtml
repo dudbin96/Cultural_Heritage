@@ -1,0 +1,73 @@
+﻿@model Cultural_Heritage.Models.cultureassets
+@{
+    ViewBag.Title = "데이터 삭제";
+}
+
+<style>
+    table 
+    {
+        border-collapse: collapse;
+        width: 30%;
+    }
+    table, th, td 
+    {
+        border: 1px solid black;
+    }
+    td 
+    {
+        padding: 10px; 
+    }
+
+    .custom-margin {
+        margin-bottom: 100px; /*원하는 bottom여백 크기*/
+    }
+
+    
+
+</style>
+@using (Html.BeginForm("Deletepost", "assets", FormMethod.Post))
+{
+<h2>데이터베이스에서 삭제</h2>
+    @Html.AntiForgeryToken()
+    <table>
+        <tr><td>num</td><td>@Html.DisplayFor(model => model.num)</td></tr>
+        <tr><td>ca_type</td><td>@Html.DisplayFor(model => model.ca_type)</td></tr>
+        <tr><td>ca_name</td><td>@Html.DisplayFor(model => model.ca_name)</td></tr>
+        <tr><td>ca_addr</td><td>@Html.DisplayFor(model => model.ca_addr)</td></tr>
+        <tr><td>ca_period</td><td>@Html.DisplayFor(model => model.ca_period)</td></tr>
+        <tr><td>ca_date</td><td>@Model.ca_date.ToString("yyyy-MM-dd")</td></tr>
+        <tr><td>ca_detail</td><td>@Html.DisplayFor(model => model.ca_detail)</td></tr>
+
+        <input type="hidden" name="id" value="@Model.num"> @*히든 사용*@
+        
+    </table>
+
+    <div style="text-align: left; padding-top: 20px;">
+        <button type="submit" class="btn btn-warning">삭 제</button>
+    </div>
+}
+
+
+<div class="custom-margin"></div>
+@*  위 내용으로 작업시하이퍼링크를 클릭하면 Deletepost 액션 메서드로 이동하고, id 매개변수에 
+Model.num 값을 전달. 이렇게 하면 삭제 작업이 서버 측으로 요청되어 된다. *@
+
+@* <input type="submit" value="삭제" class="btn btn-default" />
+<form> 요소 안에 있는 <input> 요소로, 사용자가 "삭제" 버튼을 클릭하면 
+해당 <form> 요소가 서버로 제출되고, 그러나 이 버튼을 눌렀을 때 서버로 어떤 요청을 보낼지는 
+<form> 요소의 action 속성과 method 속성에 따라 달라진다. *@
+
+@* 결국 두번째 방법은 현재 <table></table> 안에 있는 요소를 그대로 서버에 전달하기 때문에 type이 달라 삭제 요청이 되지않고,
+첫번째 방법은 삭제 작업을 서버측에 요청하는 구성으로 되어 있는듯 하다. *@
+
+
+
+@*<button></button>을 사용한다는 것은
+        버튼 submit을 클릭하면 BeginForm이 서버로 제출되도록 만든다.
+        이 삭제 작업을 하기 위해서는 service에서 보면 DELETE 함수가
+        int num를 주입하고, 값을 찾아 delete하는 형식으로 되어 있는데,
+        이는 데이터를 전송하기 위해 필요하다.
+        그러므로 값을 받을 수 있으나 시각적으로 보이지 않는 input type 히든을 사용하여
+        눈에 보이지 않고, 데이터값을 입력 받을 수 있는(value="@Model.num") 기능이다.*@
+
+@*즉, 버튼을 사용하려면 데이터 입력을 받아야한다. >> 눈에 보이지 않게 숨겨진 필드인 히든으로 데이터를 입력받는다.*@

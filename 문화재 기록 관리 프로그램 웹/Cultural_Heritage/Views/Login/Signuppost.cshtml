@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "회원 가입 결과";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    int? result = (int?)TempData["result"];
+}
+
+@if (result == 1)
+{
+    <p>회원가입 되었습니다. </p>
+}
+else
+{
+    <p>이미 등록된 아이디 입니다. </p>
+}

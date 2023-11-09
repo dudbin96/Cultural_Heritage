@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Cultural_Heritage.Models.Login>
+@{
+    ViewBag.Title = "관리자 페이지";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> 로그인 관리 </h2>
+<p>
+    <h4> 관리자 정보 </h4>
+</p>
+<p>
+   @* <h5>@Html.ActionLink("데이터 추가", "Create", "assets") @Html.ActionLink("데이터 찾기", "Find", "assets")</h5>*@
+
+</p>
+<table class="table"
+
+    <tr>
+        @*<th> @Html.DisplayNameFor(model => model.num) </th>*@
+        <th> @Html.DisplayNameFor(model => model.id) </th>
+        <th> @Html.DisplayNameFor(model => model.password) </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+            <tr>
+                @*<td> @Html.DisplayFor(modelItem => item.num)</td>*@
+                    <td> @Html.DisplayFor(modelItem => item.id)</td>
+                    <td> @Html.DisplayFor(modelItem => item.password)</td>
+
+                <td>
+                @*@Html.ActionLink("삭제", "Delete", new { id=item.num})*@
+                </td>
+            </tr>
+    }
+</table>

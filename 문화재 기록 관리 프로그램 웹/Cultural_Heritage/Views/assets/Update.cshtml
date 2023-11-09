@@ -1,0 +1,73 @@
+﻿@model Cultural_Heritage.Models.cultureassets
+@{
+    ViewBag.Title = "데이터 수정";
+}
+
+<style>
+    /* 텍스트 박스와 요소 이름 사이에 10px의 상단 패딩 추가 */
+    table tr td input[type="text"] {
+        padding-top: 10px;
+    }
+
+    .custom-margin {
+        margin-bottom: 100px; /*원하는 bottom여백 크기*/
+    }
+
+
+    .large-textarea {
+        height: 400px;
+        width: 200px;
+    }
+
+    .vertical-align-top {
+        vertical-align: top;
+    }
+</style>
+
+<h2>데이터 수정</h2>
+@using (Html.BeginForm("Updatepost", "assets", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <table>
+        <tr>
+            <td>번 호</td>
+            <td>@Html.TextBoxFor(m => m.num)</td>
+        </tr>
+        <tr>
+            <td>종 목</td>
+            <td>@Html.TextBoxFor(m => m.ca_type)</td>
+        </tr>
+        <tr>
+            <td>명 칭</td>
+            <td>@Html.TextBoxFor(m => m.ca_name)</td>
+        </tr>
+        <tr>
+            <td>소재지</td>
+            <td>@Html.TextBoxFor(m => m.ca_addr)</td>
+        </tr>
+        <tr>
+            <td>시대명</td>
+            <td>@Html.TextBoxFor(m => m.ca_period)</td>
+        </tr>
+        <tr>
+            <td>지정일</td>
+            @*<td>@Html.TextBoxFor(m => m.ca_date)</td>
+            <td>@Model.ca_date.ToString("yyyyMMdd")</td>*@
+            @*<td>@Html.TextBoxFor(m => m.ca_date, new { Value = Model.ca_date.ToString("yyyyMMdd") })</td>*@
+            @* <td>@Html.TextBoxFor(m => m.ca_date, new { type = "text", Value = Model.ca_date.ToString("yyyyMMdd") })</td> *@
+            <td>@Html.TextBoxFor(m => m.ca_date, "{0:yyyyMMdd}", new { type = "text" })</td>
+        </tr>
+        <tr>
+            <td>세부사항</td>
+            <td class="vertical-align-top">@Html.TextAreaFor(m => m.ca_detail, new { @class = "large-textarea" })</td>
+        </tr>
+
+        @*<tr><td colspan="2"><input type="submit" value="수정" class="btn btn-default" /></td></tr>*@
+    </table>
+
+    <div style="text-align: left; padding-top: 20px;">
+        <button type="submit" class="btn btn-warning">수 정</button>
+    </div>
+}
+
+<div class="custom-margin"></div>

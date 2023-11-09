@@ -1,0 +1,66 @@
+﻿@model Cultural_Heritage.Models.cultureassets
+@{
+    ViewBag.Title = "데이터 추가";
+}
+
+<style>
+    /* 텍스트 박스와 요소 이름 사이에 10px의 상단 패딩 추가 */
+    table tr td input[type="text"] {
+        padding-top: 10px;
+    }
+
+    .large-textarea {
+        height: 400px;
+        width: 200px;
+    }
+
+    .vertical-align-top {
+        vertical-align: top;
+    }
+</style>
+
+<h2>데이터 추가</h2>
+<h6>날짜는 "yyyyMMdd" 형식으로 입력</h6>
+@using (Html.BeginForm("Createpost", "assets", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <table>
+        <tr>
+            <td>번 호</td>
+            <td>@Html.TextBoxFor(m => m.num)</td>
+        </tr>
+        <tr>
+            <td>종 목</td>
+            <td>@Html.TextBoxFor(m => m.ca_type)</td>
+        </tr>
+         <tr>
+            <td>명 칭</td>
+            <td>@Html.TextBoxFor(m => m.ca_name)</td>
+        </tr>
+        <tr>
+            <td>소재지</td>
+            <td>@Html.TextBoxFor(m => m.ca_addr)</td>
+        </tr>
+         <tr>
+            <td>시대명</td>
+            <td>@Html.TextBoxFor(m => m.ca_period)</td>
+        </tr>
+         <tr>
+            <td>지정일</td>
+            <td>@Html.TextBoxFor(m => m.ca_date)</td>
+            @*<td> @Html.TextBoxFor(m => m.ca_date.ToString("yyyyMMdd"))</td>*@
+        </tr>
+        <tr>
+            <td>세부사항</td>
+            <td class="vertical-align-top">@Html.TextAreaFor(m => m.ca_detail, new { @class = "large-textarea" })</td>
+        </tr>
+        
+        @*<tr><td colspan="2"><input type="submit" value="생성" class="btn btn-default" /></td></tr>*@
+
+        
+    </table>
+
+    <div style="text-align: left; padding-top: 20px;">
+        <button type="submit" class="btn btn-warning">생 성</button>
+    </div>
+}

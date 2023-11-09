@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Cultural_Heritage.props" />
+</Project>

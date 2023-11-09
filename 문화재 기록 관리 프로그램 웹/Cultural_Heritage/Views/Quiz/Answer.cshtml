@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "퀴즈 결과!";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*퀴즈 정답 확인창 (손봐야함)*@
+@{
+    int? result = (int?)TempData["result"];
+    string Qa = (string?)TempData["Q"];
+    int Q = (int)TempData["Qimg"];
+    string Qd = (string)TempData["Qdetail"];
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .custom-margin {
+            margin-bottom: 100px; /*원하는 bottom여백 크기*/
+        }
+
+        .custom-margin1 {
+            margin-top: 10px; /*원하는 bottom여백 크기*/
+        }
+    </style>
+</head>
+
+<div class="custom-margin1"></div>
+
+<body style=" background-color: #EDF2F8;">
+    @if (result == 1)
+    {
+        <center>
+            <div class="alert alert-success" style="text-align: center; width: 300px; height: 70px;">
+                <p style="font-size: 24px; font-weight: bold;">정답입니다!</p>
+            </div>
+        </center>
+        <br>
+        <div style="text-align: center;">
+            <img src="~/images/@(Q).jpg" alt="Sample Photo" style="width: 400px; height: 250px" />
+        </div>
+
+        @*  <br />
+    <br />
+    <br /> *@
+        <div class="container mt-3">
+
+            <div class="mt-4 p-5 bg-primary text-white rounded">
+
+                <p>@(Qd)</p>
+            </div>
+        </div>
+        <br />
+        <br />
+
+
+
+    }
+    else
+    {
+        <center>
+            <div class="alert alert-danger" style="text-align: center; width: 380px; height: 100px;">
+                <p style="font-size: 24px; font-weight: bold;"><strong>오답입니다.<br /></strong>조금 더 공부하세요 ㅠ.ㅠ </p>
+            </div>
+        </center>
+        <br>
+        <center>
+            정답은: @(Qa)
+            @*  <br>
+        <br>
+        <br> *@
+            <div style="text-align: center;">
+                <div style="border: 2px solid #000; padding: 5px; display: inline-block;">
+                    <img src="~/images/@(Q).jpg" alt="Sample Photo" style="width: 400px; height: 250px" />
+                </div>
+            </div>
+        </center>
+        @*   <br />
+    <br />
+    <br /> *@
+        <div class="container mt-3">
+            <div class="mt-4 p-5 bg-primary text-white rounded">
+                <p>@(Qd)</p>
+            </div>
+        </div>
+        <br />
+        <br />
+
+
+    }
+    <br />
+    <br />
+    <div class="custom-margin" style="text-align: right;">
+        @Html.ActionLink("다음문제", "Quiz", "Quiz")
+    </div>
+
+</body>
+</html>

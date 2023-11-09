@@ -1,0 +1,30 @@
+﻿@model Cultural_Heritage.Models.cultureassets
+@{
+    ViewBag.Title = "데이터 검색";
+}
+
+<h2>데이터 검색</h2>
+@using (Html.BeginForm("Findpost", "assets", FormMethod.Post))
+{
+
+    <table>
+        <tr>
+            <td>
+                문화재 명칭
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_name)
+            </td>
+        </tr>
+
+        @*<tr>
+            <td colspan="2">
+                <input type="submit" value="Find" class="btn btn-default" />
+            </td>
+        </tr>*@
+
+    </table>
+    <div style="text-align: left; padding-top: 20px;">
+        <button type="submit" class="btn btn-warning">찾 기</button>
+    </div>
+}

@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "데이터 수정 결과";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    int? result = (int?)TempData["result"];
+}
+
+@if (result == 1)
+{
+    <p>데이터 수정이 성공하였습니다. </p>
+}
+else
+{
+    <p>데이터 수정에 실패하였습니다. </p>
+}

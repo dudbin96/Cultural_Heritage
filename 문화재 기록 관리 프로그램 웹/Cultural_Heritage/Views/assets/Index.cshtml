@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Cultural_Heritage.Models.cultureassets>
+@{
+    ViewBag.Title = "관리자 페이지";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .custom-margin {
+        margin-bottom: 100px; /*원하는 bottom여백 크기*/
+    }
+</style>
+
+<h2> 데이터 관리 </h2>
+<p>
+    <h4> SQL 문화재 데이터 목록 </h4>
+</p>
+<p>
+    <h5>@Html.ActionLink("데이터 추가", "Create", "assets" , null, new { style = "text-decoration: none; color: black;" })
+        @Html.ActionLink("데이터 찾기", "Find", "assets" , null, new { style = "text-decoration: none; color: black;" })</h5>
+</p>
+
+<table class="table table-striped"
+
+    <tr>
+        <th> @Html.DisplayNameFor(model => model.num) </th>
+        <th> @Html.DisplayNameFor(model => model.ca_type) </th>
+        <th> @Html.DisplayNameFor(model => model.ca_name) </th>
+        <th> @Html.DisplayNameFor(model => model.ca_addr) </th>
+        <th> @Html.DisplayNameFor(model => model.ca_period) </th>
+        <th> @Html.DisplayNameFor(model => model.ca_date) </th>
+        <th> @Html.DisplayNameFor(model => model.ca_detail) </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>       
+            <td> @Html.DisplayFor(modelItem => item.num)</td>
+            <td> @Html.DisplayFor(modelItem => item.ca_type)</td>
+            <td> @Html.DisplayFor(modelItem => item.ca_name)</td>
+            <td> @Html.DisplayFor(modelItem => item.ca_addr)</td>
+            <td> @Html.DisplayFor(modelItem => item.ca_period)</td>
+            <td> @item.ca_date.ToString("yyyy-MM-dd")</td> @*인덱스 내 날짜 표현식 : datetime -> ToString("yyyy-MM-dd")*@
+            @*<td> @Html.DisplayFor(modelItem => item.ca_detail)</td>*@
+                <td>
+                @{
+                    string caDetail = item.ca_detail;
+                    int maxLength = 20; // 표시할 최대 길이
+                    if (caDetail.Length > maxLength)
+                    {
+                        caDetail = caDetail.Substring(0, maxLength) + "...";
+                    }
+                }
+                @Html.Raw(caDetail) <!-- HTML이 인코딩되지 않고 그대로 출력되도록 하려면 Html.Raw 사용 -->
+                </td>
+                
+            <td>
+                @Html.ActionLink("수정", "Update", new { id=item.num}, new { style = "text-decoration: none; color: black;" }) |
+                @Html.ActionLink("삭제", "Delete", new { id=item.num}, new { style = "text-decoration: none; color: black;" })
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="custom-margin"></div>

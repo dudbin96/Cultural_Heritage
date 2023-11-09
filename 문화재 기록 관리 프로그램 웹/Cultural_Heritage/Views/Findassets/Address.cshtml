@@ -1,0 +1,82 @@
+﻿@model Cultural_Heritage.Models.cultureassets
+@{
+    ViewBag.Title = "소재지 검색";
+}
+@*
+    주소로 검색
+*@
+
+<style>
+    body {
+        font-family: Arial;
+        background: #EDF2F8;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .custom-margin {
+        margin-top: 200px; /*원하는 bottom여백 크기*/
+    }
+
+    form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #FFFFFF;
+    }
+
+    form.example button {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background: #3d4f9c;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+    }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+    form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+
+@*<h2>Research</h2>
+@using (Html.BeginForm("FindAddress", "Findassets", FormMethod.Post))
+{
+    폼을 여기서 생성하면 스타일이 먹지않음
+    <form class="example" action="/action_page.php">
+          <input type="text" name="ca_addr" id="ca_addr" value="@Model.ca_addr" placeholder="소재지별 검색..." />
+          <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+}
+*@
+
+<div class="custom-margin"></div>
+
+<center>
+    <img src="~/images/Searchlogo1.png" alt="왜 안나와요?" style="width: 400px; height: 150px">
+    <br><br>
+</center>
+
+
+@using (Html.BeginForm("FindAddress", "Findassets", FormMethod.Post, new { @class = "example" }))
+@*이처럼 예제 클래스를 BeginForm에 직접 추가하면 적용이됨.*@
+@*위에서 스타일이 먹지 않았던 이유는 css양식이 옳바르지 않다는데, BeginForm에 대해 더 알아보아야 이해할듯.*@
+@*그래서 폼에다가 직접 example이라는 클래스를 주고 아래에는 인풋과 버튼만 출력하게끔*@
+
+{
+    <input type="text" name="ca_addr" id="ca_addr" value="@Model.ca_addr" placeholder="소재지별 검색..." />
+    <button type="submit"><i class="fa fa-search"></i></button>
+}

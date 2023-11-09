@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - 문화재 기록 관리 </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Cultural_Heritage.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Jnujsl5+zI5tj5FbF5F5F5F5F5F5F5F5F5F5F5F5F5F5F5F5" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-2KDs8Jz08fN6G1s0/3BMpFpC2yqoD5foD5foD5foD5foD5foD5foD5foD5foD5foD5" crossorigin="anonymous"></script>
+    <style>
+        input {
+            width: 100%;
+             @*스타일 부분 버튼 , 내용부분을 100% 꽉차게 만들어라*@
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #3D4F9C">
+            <div class="container-fluid">
+                <strong><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/마크.png" alt="왜 안나와요?"></a></strong>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <strong><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">메인</a></strong>
+                        </li>
+                        <li class="nav-item">
+                            <strong><a class="nav-link text-white-50" asp-area="" asp-controller="assets" asp-action="Login">데이터 관리</a></strong>
+                        </li>
+                        <li class="nav-item">
+                            <strong><a class="nav-link text-white-50" asp-area="" asp-controller="Login" asp-action="Login">로그인 관리</a></strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" style="background-color: #d1dbe7">
+        <div class="container">
+            &copy; 2023 - 대전 문화재 기록 관리 프로그램 - <a asp-area="" asp-controller="Home", null, new { style="text-decoration: none; color: black;" asp-action="Index">Home</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

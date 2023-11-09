@@ -1,0 +1,173 @@
+﻿@model IEnumerable<Cultural_Heritage.Models.cultureassets>
+@{
+    ViewBag.Title = "데이터 검색 출력";
+}
+
+<style>
+    .custom-margin1 {
+        margin-bottom: 100px; /*원하는 bottom여백 크기*/
+    }
+
+    .custom-margin2 {
+        margin-top: 50px; /*원하는 bottom여백 크기*/
+    }
+
+    .custom-margin3 {
+        margin-bottom: 100px; /*원하는 bottom여백 크기*/
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    /*td {
+        padding: 20px;
+    }*/
+
+    /* "세부사항" 열의 너비를 조정합니다. */
+    .detail-column {
+        width: 200px; /* 원하는 너비로 조정하세요. */
+    }
+
+    /*.p1 {        
+        width: 50px;
+    }
+
+    .p2 {
+        width: 50px;
+    }*/
+
+    
+    .custom-modal-btn {
+        font-size: 2px; 
+        padding: 2px 5px;
+        float: right;
+        text : black;
+    }
+
+    .body {
+        background-color: #edf2f8;
+    }
+
+</style>
+
+<div class="custom-margin2"></div>
+
+<body class="body">
+<strong><h3>검색 결과</h3></strong>
+@*<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>번 호</td>
+            <td>@Html.DisplayFor(modelItem => item.num)</td>
+            <td rowspan="6">세부사항</td>
+            <td class="detail-column" rowspan="6">@Html.DisplayFor(modelitem => item.ca_detail)</td>
+        </tr>
+        <tr>
+            <td>종 목</td>
+            <td>@Html.DisplayFor(modelitem => item.ca_type)</td>
+        </tr>
+        <tr>
+            <td>명 칭</td>
+            <td>@Html.DisplayFor(modelitem => item.ca_name)</td>
+        </tr>
+        <tr>
+            <td>소재지</td>
+            <td>@Html.DisplayFor(modelitem => item.ca_addr)</td>
+        </tr>
+        <tr>
+            <td>시대명</td>
+            <td>@Html.DisplayFor(modelitem => item.ca_period)</td>
+        </tr>
+        <tr>
+            <td>지정일</td>
+            <td>@item.ca_date.ToString("yyyy-MM-dd")</td>
+        </tr>
+    
+</table>*@
+
+@foreach (var item in Model)
+        {
+
+<div class="container-fluid mt-3">
+
+    <table class="table">
+        
+        <tr>
+                <td class="p-2 text-white" style="background-color: #4D5E9C; width: 1px;">번  호</td>
+                <td class="p-2 text-black" style="background-color: #ffffff; width: 1px;">@Html.DisplayFor(modelItem => item.num)</td>
+                <td class="p-2 text-white" style="background-color: #4D5E9C; width: 200px;">
+                    정  보
+                    <button type="button" class="btn btn-warning custom-modal-btn" data-bs-toggle="modal" data-bs-target="#myModal-@item.num">
+                        이미지 정보
+                    </button>
+
+                    <div class="modal fade" id="myModal-@item.num" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-@item.num" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header text-black">
+                                    <h4 class="modal-title" id="myModalLabel-@item.num">@Html.DisplayFor(modelitem => item.ca_name)</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- Modal Body -->
+                                <div class="modal-body text-black">
+                                    <!-- Modal content here -->
+                                    @*<p><img src="~/images/@item.num.jpg" alt="이름검색" style="width: 100%; height:100%"></p>*@
+                                    <p>종 목 : @item.ca_type </p>
+                                    <p>소재지 : @item.ca_addr </p>
+                                    <p>시대명 : @item.ca_period </p>
+                                    <p>지정일 : @item.ca_date.ToString("yyyy-MM-dd") </p>
+                                    <p><img src="~/images/@(item.num).jpg" alt="이름검색" style="width: 100%; height:100%"></p>
+                                </div>
+                                <!-- Modal Footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫 기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
+        </tr>
+        <tr>
+                <td class="p-2 text-white" style="background-color: #4D5E9C; width: 1px; vertical-align: middle;">종  목</td>
+                <td class="p-2 text-black" style="background-color: #ffffff; width: 1px; vertical-align: middle;">@Html.DisplayFor(modelitem => item.ca_type)</td>
+                <td rowspan="5" class="p-2 bg-white text-black" style="width: 200px;">
+                    @Html.DisplayFor(modelitem => item.ca_detail)                
+                </td>
+                    
+        </tr>
+
+        <tr>
+                <td class="p-2 text-white" style="background-color: #4D5E9C; width: 1px; vertical-align: middle;">명  칭</td>
+                <td class="p-2 text-black" style="background-color: #ffffff; width: 1px; vertical-align: middle;">@Html.DisplayFor(modelitem => item.ca_name)</td>
+        </tr>
+        <tr>
+                <td class="p-2 text-white" style="background-color: #4D5E9C; width: 1px; vertical-align: middle;">소재지</td>
+                <td class="p-2 text-black" style="background-color: #ffffff; width: 1px; vertical-align: middle;">@Html.DisplayFor(modelitem => item.ca_addr)</td>
+        </tr>
+        <tr>
+                <td class="p-2 text-white" style="background-color: #4D5E9C; width: 1px; vertical-align: middle;">시대명</td>
+                <td class="p-2 text-black" style="background-color: #ffffff; width: 1px; vertical-align: middle;">@Html.DisplayFor(modelitem => item.ca_period)</td>
+        </tr>
+
+        <tr>
+                <td class="p-2 text-white" style="background-color: #4D5E9C; width: 1px; vertical-align: middle;">지정일</td>
+                <td class="p-2 text-black" style="background-color: #ffffff; width: 1px; vertical-align: middle;">@item.ca_date.ToString("yyyy-MM-dd")</td>
+        </tr>
+       
+    </table>
+
+</div>
+    <div class="custom-margin3"></div>
+}
+
+<div class="custom-margin1"></div>
+
+</body>

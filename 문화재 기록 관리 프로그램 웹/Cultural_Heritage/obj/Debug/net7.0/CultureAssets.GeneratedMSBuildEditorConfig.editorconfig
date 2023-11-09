@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CultureAssets
+build_property.RootNamespace = CultureAssets
+build_property.ProjectDir = C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\202-16\Desktop\CultureAssets\Cultural_Heritage
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/assets/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXNzZXRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/assets/Createpost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXNzZXRzXENyZWF0ZXBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/assets/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXNzZXRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/assets/Deletepost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXNzZXRzXERlbGV0ZXBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/assets/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYXNzZXRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/202-16/Desktop/CultureAssets/Cultural_Heritage/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-v6u1u3mn2f

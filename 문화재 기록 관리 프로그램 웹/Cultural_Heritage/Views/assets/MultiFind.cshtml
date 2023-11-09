@@ -1,0 +1,30 @@
+﻿@model Cultural_Heritage.Models.cultureassets
+@{
+    ViewBag.Title = "Research";
+}
+
+<h2>데이터 검색</h2>
+@using (Html.BeginForm("MultiFindpost", "assets", FormMethod.Post))
+{
+
+    <table>
+        <tr>
+            <td>
+                부분 검색 명칭 :
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_name)
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Find" class="btn btn-default" />
+            </td>
+        </tr>
+
+    </table>
+}
+<div>
+    @Html.ActionLink("돌아가기", "Index")
+</div>

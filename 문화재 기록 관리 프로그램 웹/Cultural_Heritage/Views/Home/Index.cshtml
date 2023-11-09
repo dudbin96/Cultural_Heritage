@@ -1,0 +1,164 @@
+﻿@model IEnumerable<Cultural_Heritage.Models.cultureassets>
+@{
+    ViewData["Title"] = "홈";
+}
+<style>
+    .custom-margin1 {
+        margin-top: 20px;
+    }
+
+     .custom-margin0 {
+        margin-top: 20px;
+    }
+
+    .custom-margin4 {
+        margin-top: 20px;
+    }
+
+    .custom-margin2 {
+        margin-bottom: 200px;
+    }
+
+    .section {
+        border: 2px solid black;
+    }
+
+    .body{
+        background-color: #edf2f8;
+    }
+
+</style>
+<div class="custom-margin0"></div>
+<body class="body">
+@* <nav style="background-color: #E0FFFF; float: right; text-align: center; color: black;
+    padding: 10px; width: 29%; height: 800px; border-radius: 10px 10px 10px 10px; font-family: 'Dongle', sans-serif;">
+    <p><span style="font-size: 40px">문화재 퀴즈</span></p>
+    <p><span style="font-size: 20px">정답은 꼭 공백을 포함해서 정확하게 입력해주세요!</span></p>
+</nav> *@
+<nav style="float: right; width: 29%; height: 805px; border-radius: 10px 10px 10px 10px;">
+        <div class="row">
+            <div class="p-1" style="border: 1px solid #d1dbe7; background-color: #E6EDF7; float: left; margin: 0px 10px 1px 11px; max-width: 301px; color: #B9B9B8;">문화재 퀴즈 !</div>
+        </div>
+        <div class="row">
+            <a href="~/Quiz/Quiz"><img src="~/images/퀴즈버튼.jpg" alt="퀴즈버튼" style="border: 1px solid black; max-width: 80%; height:100%"></a>
+        </div>
+
+        <div class="row">
+            <div class="p-1" style="border: 1px solid #edf2f8; background-color: #edf2f8; float: left; margin: 0px 10px 1px 11px; max-width: 301px; color: #edf2f8;"></div>
+        </div>
+
+        @*<div class="d-flex p-3 bg-secondary text-white" style="float: left; margin: 0px 10px 1px 0px; max-width: 301px; height: 400px;">
+            <td>
+            <div class="p-2 bg-info">Flex item 1</div>
+            </td>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>*@
+</nav>
+
+<section style="border: 5px solid #d1dbe7; background-color: #ffffff; width:70%; height: 1120px;">
+    <article>
+            <div class="text-center" style="background-color: #E6EDF7">
+                @* <a href="https://www.cha.go.kr/main.html"><img src="~/images/어굴참홈배너.jpg" alt="어굴참홈배너" style="margin: 0 auto; width: 80%; height:120px"></a> *@
+                <img src="~/images/Searchlogo1.png" alt="왜 안나와요?" style="width: 400px; height: 150px">
+                @*<img src="~/images/로고.png" alt="왜 안나와요?" style="width: 400px; height: 150px">*@
+        </div>
+
+              
+    </article>
+        <div class="row">
+            <div class="p-1" style="border: 1px solid #d1dbe7; background-color: #E6EDF7; float: left; margin: 0px 10px 0px 11px; max-width: 899px; color: #B9B9B8;">카테고리 검색</div>
+        </div>
+        <div class="row">
+            <div class="p-1 text-white" style="border: 1px solid #d1dbe7; background-color: #ffffff; float: left; margin: 0px 10px 0px 11px; max-width: 899px;">
+                <div style="border: 1px solid gray; float: left; margin: 5px 5px 5px 120px">
+                    <a href="~/Findassets/Type"><img src="~/images/종목.jpg" alt="종목검색" style="width: 100%; height:100%"></a>
+                </div>
+                <div style="border: 1px solid gray; float: left; margin: 5px 5px 5px 10px">
+                    <a href="~/Findassets/Address"><img src="~/images/지역.jpg" alt="지역검색" style="width: 100%; height:100%"></a>
+                </div>
+                <div style="border: 1px solid gray; float: left; margin: 5px 5px 5px 10px">
+                    <a href="~/Findassets/Period"><img src="~/images/시대.jpg" alt="시대검색" style="width: 100%; height:100%"></a>
+                </div>
+                <div style="border: 1px solid gray; float: left; margin: 5px 115px 5px 10px">
+                    <a href="~/Findassets/Name"><img src="~/images/이름.jpg" alt="이름검색" style="width: 100%; height:100%"></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="p-1" style="border: 1px solid #d1dbe7; background-color: #E6EDF7; float: left; margin: 0px 10px 1px 11px; max-width: 899px; color: #B9B9B8;">슬라이드 쇼</div>
+        </div>
+
+    <div class="custom-margin1"></div>
+
+    @*슬라이드쇼 부분*@
+    <article>
+            <div class="border-carousel" style="border: 5px solid #d1dbe7; width: 95%; margin: 0 auto; height: 80%;">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel" style="height: 100%;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/images/7.jpg" alt="옥류각" class="d-block" style="width:100%; height: 500px">
+                    <div class="carousel-caption">
+                        <h3>옥 류 각</h3>
+                        <p>대전광역시 유형문화재</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/13.jpg" alt="운부군옥" class="d-block" style="width:100%; height: 500px">
+                    <div class="carousel-caption">
+                        <h3>운부군옥</h3>
+                        <p>대전광역시 유형문화재</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/60.jpg" alt="회덕 동춘당" class="d-block" style="width:100%; height: 500px">
+                    <div class="carousel-caption">
+                        <h3>회덕 동춘당</h3>
+                        <p>보물</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/70.jpg" alt="나신걸 한글편지" class="d-block" style="width:100%; height: 500px">
+                    <div class="carousel-caption">
+                        <h3>나신걸 한글편지</h3>
+                        <p>보물</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/26.jpg" alt="	용화사석불입상" class="d-block" style="width:100%; height: 500px">
+                    <div class="carousel-caption">
+                        <h3>용화사석불입상</h3>
+                        <p>대전광역시 유형문화재</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            </div>
+        </div>
+    </article>
+        <div class="row">
+            <div class="p-1" style="border: 1px solid #d1dbe7; background-color: #E6EDF7; float: left; margin: 20px 10px 0px 11px; max-width: 899px; color: #B9B9B8;">출처 배너</div>
+        </div>
+        <div class="text-center" style="background-color: #ffffff">
+            <a href="https://www.cha.go.kr/main.html"><img src="~/images/어굴참홈배너.jpg" alt="어굴참홈배너" style="margin: 0 auto; width: 80%; height:120px"></a>
+        </div>
+
+</section>
+
+<div class="custom-margin2"></div>
+
+</body>
