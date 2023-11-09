@@ -17,7 +17,7 @@ namespace Cultural_Heritage.Controllers
         public assetsController()
         { 
             String ConnectionString = "Server=" + "127.0.0.1" + ";Database=" +
-                                      "cultureassets" + ";port=" + "3306" + ";User=" + "root" + ";password=" + "0000";
+                                      "cultureassets" + ";port=" + "3306" + ";User=" + "root" + ";password=" + "암호";
             stud = new assets_services(ConnectionString);
         }
         

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6GbWKETA2rsEWJ9uxM1WIlR6xcAjgetoc5VM36TogJgbvb3EWiADXg0fbdOjabmX2kO43auW5rSX1t976R+Y4g==",
+  "dgSpecHash": "73ZBTkEbxTIoRznn4DHAX1vMB8bkXnzDbcoMAwfcEn8P3i15QiLNK4XERBF2xBdeTbsbL29OQUBMVrV7aNM65w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\202-16\\Desktop\\문화재 기록 관리 프로그램\\문화재 기록 관리 프로그램 웹\\Cultural_Heritage\\Cultural_Heritage.csproj",
+  "projectFilePath": "C:\\Users\\202-16\\Desktop\\문화재 기록 관리 프로그램\\Web Service\\Cultural_Heritage\\Cultural_Heritage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\202-16\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\202-16\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",

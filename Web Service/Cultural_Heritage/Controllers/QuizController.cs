@@ -11,7 +11,7 @@ namespace Cultural_Heritage.Controllers
         public QuizController()
         {
             String connString = "Server=" + "127.0.0.1" + ";Database=" + "cultureassets" + ";port=" + "3306" + ";User=" + "root" +
-                ";password=" + "0000";
+                ";password=" + "암호";
             stud = new assets_services(connString);//접속 문자열을 임마한테 넘겨준다 
         }
 
